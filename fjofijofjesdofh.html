@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html Lang="en">
+<!--WORKING-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>colorful rain</title>
+    <link rel="stylesheet" href="D:\vs code naju\from mobile\colorful rain\css\style.css" />
+</head>
+
+<body>
+
+    <script>
+        function rain() {
+            let amount = 200;
+            let body = document.querySelector('body');
+            let i = 0;
+            while (i < amount) {
+                let drop = document.createElement('i');
+
+                let size = Math.random() * 2;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -20;
+                let duration = Math.random() * 5;
+
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay + 's';
+                drop.style.animationDuration = 1 + duration + 's';
+                body.appendChild(drop);
+                i++
+            }
+        }
+
+        rain();
+    </script>
+</body>
+
+</html>
